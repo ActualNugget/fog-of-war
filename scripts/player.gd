@@ -27,7 +27,7 @@ const FACE_ACCELERATION = 5.0
 	#move_and_slide()
 
 func _physics_process(delta):
-	var direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	var direction = Input.get_vector("left", "right", "up", "down")
 	
 	if direction != Vector2.ZERO:
 		velocity = velocity.move_toward(direction * maxSPEED, ACCELERATION * delta)
