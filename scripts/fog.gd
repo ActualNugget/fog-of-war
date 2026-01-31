@@ -22,21 +22,15 @@ func _ready() -> void:
 	lightImage.convert(Image.FORMAT_RGBAH)
 	fog.scale *= GRID_SIZE
 
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	update_fog($"../Player".position/GRID_SIZE)
+
 func update_fog(new_grid_position):
-	#fogImage.lock()
-	#lightImage.lock()
-	
 	var light_rect = Rect2(Vector2.ZERO, Vector2(lightImage.get_width(), lightImage.get_height()))
 	fogImage.blend_rect(lightImage, light_rect, new_grid_position - light_offset)
-	
-	#fogImage.unlock()
-	#lightImage.unlock()
 	update_fog_image_texture()
 
 func update_fog_image_texture():
 	fogTexture = ImageTexture.create_from_image(fogImage)
 	fog.texture = fogTexture
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	update_fog($"../Player".position/GRID_SIZE)

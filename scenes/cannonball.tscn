@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://beshdhmbut5nx"]
+
+[ext_resource type="Texture2D" uid="uid://spclda5q7alv" path="res://assets/sprites/kenney_pirate-pack/PNG/Default size/Ship parts/cannonBall.png" id="1_77qtm"]
+[ext_resource type="Script" uid="uid://byglleu8yjqih" path="res://scripts/cannonball.gd" id="1_402uy"]
+
+[node name="Cannonball" type="Node2D" unique_id=1176168542]
+script = ExtResource("1_402uy")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1644170781]
+texture = ExtResource("1_77qtm")
