@@ -1,9 +1,10 @@
 extends Node2D
 # https://www.youtube.com/watch?v=zkMSbQoUd9o
 
-const LightTexture = preload("res://assets/sprites/kenney_particle-pack/PNG (Transparent)/circle_05.png")
+#const LightTexture = preload("res://assets/sprites/kenney_particle-pack/PNG (Transparent)/circle_05.png")
+const LightTexture = preload("res://assets/sprites/circle_05_64x.png")
 const GRID_SIZE = 16
-@export var LIGHT_SIZE = 100
+@export var LIGHT_SIZE = 30
 
 @onready var fog = $Fog
 
